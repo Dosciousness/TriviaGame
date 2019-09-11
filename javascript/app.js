@@ -7,9 +7,9 @@ $(document).ready(function() {
       correctAnswer: "Sacramento"
     },
     {
-      question: "What is the capital of Maryland?",
-      answers: ["Annapolis", "Baltimore", "Bethesda", "Columbia"],
-      correctAnswer: "Annapolis"
+      question: "What is the capitol of Maryland?",
+      answers: ["Annapolis", "Baltimore", "Washington DC", "Columbia"],
+      correctAnswer: "Washington DC"
     },
     {
       question: "What is the capital of Alabama?",
