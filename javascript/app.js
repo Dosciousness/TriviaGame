@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log("helloworld");
+  console.log("Top of the Mornin");
   let questions = [
     {
       question: "What is the capital of California",
