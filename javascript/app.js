@@ -85,7 +85,7 @@ $(document).ready(function() {
 
       $("#counterNum").html(game.counter);
 
-      viewPort.html("<h2>Out of Time Are You Related To A Turtle?!</h2>");
+      viewPort.html("<h2>Out of Time; Are You Related To A Turtle?!</h2>");
       viewPort.append(
         "<h3>The Legit Answer Was: " +
           questions[this.currentQuestion].correctAnswer
@@ -102,7 +102,7 @@ $(document).ready(function() {
       clearInterval(timer);
 
       viewPort.html(
-        "<h2>Quiz Complete, here is how it panned out for you!</h2>"
+        "<h2>Quiz Wrapped up, here is how it panned out for you!</h2>"
       );
 
       $("#counterNum").text(game.counter);
@@ -137,10 +137,10 @@ $(document).ready(function() {
       clearInterval(timer);
 
       viewPort.html(
-        "<h2 style='color:red'>Step your game up thats Wrong!!!</h2>"
+        "<h2 style='color:red'>Step your game up; thats Incorrect!!!</h2>"
       );
       viewPort.append(
-        "<h3>The Proper and Legit Answer was: " +
+        "<h3>The Proper and Legitimate Answer was: " +
           questions[game.currentQuestion].correctAnswer +
           "</h3>"
       );
@@ -158,7 +158,7 @@ $(document).ready(function() {
     game.correct++;
 
     viewPort.html(
-        "<h2 style='color:green'>Lightweight Skills thats CORRECT!</h2>"
+        "<h2 style='color:green'>Lightweight Skills, thats CORRECT!</h2>"
     );    
 
     if (game.currentQuestion === questions.length - 1) {
