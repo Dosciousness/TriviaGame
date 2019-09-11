@@ -1,7 +1,5 @@
 $(document).ready(function() {
   console.log("helloworld");
-  // GLOBAL VARIABLES
-  // Creating an object to hold our questions.
   let questions = [
     {
       question: "What is the capital of California",
@@ -35,13 +33,12 @@ $(document).ready(function() {
     }
   ];
 
-  // variables to hold our set interval and counter
+
   let timer;
   let countStartNum = 30;
 
   var viewPort = $("#quiz-area");
 
-  // creating the game object to hold the functions and variables to the game
   var game = {
     questions: questions,
     currentQuestion: 0,
@@ -95,9 +92,9 @@ $(document).ready(function() {
       );
 
       if (game.currentQuestion === questions.length - 1) {
-        setTimeout(game.results, 3 * 1000);
+        setTimeout(game.results, 5 * 1000);
       } else {
-        setTimeout(game.nextQuestion, 3 * 1000);
+        setTimeout(game.nextQuestion, 5 * 1000);
       }
     },
 
@@ -149,26 +146,26 @@ $(document).ready(function() {
       );
 
       if (game.currentQuestion === questions.length - 1) {
-        setTimeout(game.results, 3 * 1000);
+        setTimeout(game.results, 6 * 1000);
       } else {
-        setTimeout(game.nextQuestion, 3 * 1000);
+        setTimeout(game.nextQuestion, 6 * 1000);
       }
     },
 
     answeredCorrectly: function() {
-      clearInterval(timer);
+    clearInterval(timer);
 
-      game.correct++;
+    game.correct++;
 
-      viewPort.html(
+    viewPort.html(
         "<h2 style='color:green'>Lightweight Skills thats CORRECT!</h2>"
-      );
+    );    
 
-      if (game.currentQuestion === questions.length - 1) {
+    if (game.currentQuestion === questions.length - 1) {
         setTimeout(game.results, 2 * 1000);
-      } else {
+    } else {
         setTimeout(game.nextQuestion, 2 * 1000);
-      }
+    }
     },
 
     reset: function() {
@@ -179,8 +176,6 @@ $(document).ready(function() {
       this.loadQuestion();
     }
   };
-
-  // CLICK EVENTS
 
   $(document).on("click", "#start-over", function() {
     game.reset();
